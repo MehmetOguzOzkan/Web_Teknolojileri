@@ -13,9 +13,9 @@
     <div>   
         <form action="sorgu.php" method="POST" class="login">
             <h1>Giriş</h1>
-            <input type="text" name="kullaniciadi" placeholder="Kullanıcı Adı">
-            <input type="password" name="parola" placeholder="Şifre">
-            <input type="submit" placeholder="Gönder">
+            <input class="login1" type="text" name="kullaniciadi" placeholder="Kullanıcı Adı">
+            <input class="login1" type="password" name="parola" placeholder="Şifre">
+            <input class="button" type="submit" placeholder="Gönder">
         </form>
     </div>
 </body>

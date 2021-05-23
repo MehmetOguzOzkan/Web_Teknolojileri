@@ -21,6 +21,15 @@
 {
     background: #004b98;color: #fff;display: block;padding: 30px 20px;text-decoration: none;
 }
+@media screen and (max-width:1300px)
+{
+    .navigation li a{padding: 9px 6px;}
+    #listBody{font-size: 100%;}
+}
+@media screen and (max-width:800px)
+{
+    #listBody{font-size: 45%;}
+}
 .navigation li a:hover
 {
     background: #0069d4;
@@ -421,7 +430,7 @@ textarea
     background-size: cover;
     margin: 8% 33%;
 }
-.login input
+.login1
 {
     width: 90%;
     padding: 5% 5%;
@@ -429,7 +438,7 @@ textarea
     border: 1px solid gray;
     margin: 5% 0;
 }
-.login button
+.button
 {
     background-color: darkgray;
     width: 50%;
@@ -437,7 +446,7 @@ textarea
     border: 2px solid gray;
     margin: 10% 25%;
 }
-.login button:hover
+.button:hover
 {
     background-color: lightgray;
 }

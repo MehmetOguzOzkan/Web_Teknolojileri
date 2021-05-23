@@ -23,11 +23,41 @@
             <li><a href="iletisim.html">İletişim</a></li>
         </ul>
     </div>
+    <script>
+        function validateForm()
+        {
+            var isim = document.forms["contactForm"]["name"].value;
+            var eposta = document.forms["contactForm"]["email"].value;
+            var mesaj = document.forms["contactForm"]["message"].value;
+            var atpos = eposta.indexOf("@");
+            var dotpos = eposta.lastIndexOf(".");
+            if(isim=="")
+            {
+                alert("Lütfen isminizi giriniz!")
+                return false;
+            }
+            if(eposta=="")
+            {
+                alert("Lütfen e-postanızı giriniz!")
+                return false;
+            }
+            if(mesaj=="")
+            {
+                alert("Lütfen mesajınızı giriniz!")
+                return false;
+            }
+            if(atpos<1 || dotpos<atpos+2  || dotpos+2>=eposta.length);
+            {
+                alert("Geçerli e-mail adresi girin!");
+                return false;
+            }
+        }
+    </script>
     <div id="message">
         <h1>
             İletişim
         </h1>
-        <form id="contactForm" name="contactForm" method="GET" action="sorgu.php" novalidate="novalidate">
+        <form id="contactForm" name="contactForm" onsubmit="return validateForm()">
             <input type="text" class="input" id="field-name" name="name" placeholder="Ad...">
             <input type="email" class="input" id="field-email" name="email" placeholder="Eposta...">
             <textarea class="textarea" id="field-message" name="message" placeholder="Mesaj..."></textarea>
